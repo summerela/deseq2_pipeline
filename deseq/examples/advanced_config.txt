@@ -1,0 +1,41 @@
+[paths]
+
+# base path for analysis output
+working_dir=/home/my_experiment/
+
+# path to master_dhs file, or none to create from input samples
+input_master=/path/to/my/master_dhs.bed
+
+# path to aggregation id's, one per line
+agg_list=/home/my_experiment/agg_ids.txt
+
+[transforms]
+
+# if a DHS is not found in this many samples, remove dhs from counts
+# enter 0 for no filter
+sample_threshold=1
+
+# enter your desired FDR cutoff, default = 0.01
+fdr = 0.05
+
+# choose custom for John Lazar's normalization script
+# choose none to use DESeq filtering
+norm_method=custom
+
+# if using John Lazar's normalization method,
+# select true to use geomean, false for loess
+geomean=true
+
+[deseq_options]
+
+# contrast argument for DESeq (column,var2,var1) # example "condition,dnmt3, wt"
+# note that these variables must match the case and spelling in your metadata
+# the base variable (wt, day0, etc) must be listed last
+experimental_design="condition + time"
+
+# supply required contrast argument to DESeq
+# column_name, level1, level2
+contrasts="condition,WT,DNMT3+"
+
+# true to save intermediate DESeq and results objects
+save_r_objects=true

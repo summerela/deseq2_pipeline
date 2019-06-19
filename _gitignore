@@ -1,0 +1,24 @@
+# Compiled python modules.
+*.pyc
+
+# Setuptools distribution folder.
+/dist/
+
+# ignore pycharm folders
+/.idea/
+/.ipynb_checkpoints/
+
+# Python egg metadata, regenerated from source files by setuptools.
+/*.egg-info
+/*.egg
+
+# Possible intermediate files
+
+*.bed
+*.pdf
+*.png
+*.log
+*.out
+
+
+

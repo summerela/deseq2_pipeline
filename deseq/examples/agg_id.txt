@@ -1,0 +1,5 @@
+agg_id  condition   condition2
+AG5543  WT  day1
+AG4544  WT  day2
+AG8008  DMSO    day1
+AG8098  DMSO    day2

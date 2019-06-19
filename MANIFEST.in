@@ -1,0 +1,4 @@
+include README.rst
+include deseq.R
+include deseq_config.txt
+include .gitignore

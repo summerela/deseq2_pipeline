@@ -1,0 +1,21 @@
+[paths]
+
+# path to metadata file with agg_id's
+agg_list=./metadata.txt
+
+[transforms]
+
+# if a DHS is not found in this many samples, remove it
+# enter 0 for no filter
+sample_threshold=1
+
+[deseq_options]
+
+# experimental design for DESeq
+# example (treatment, or treatment + time)
+experimental_design=condition
+
+# contrast argument for DESeq (column,var2,var1) # example "condition,dnmt3, wt"
+# note that these variables must match the case and spelling in your metadata
+# the base variable (wt, day0, etc) must be listed last
+contrasts=condition,RCC,TUB
